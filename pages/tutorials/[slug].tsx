@@ -1,5 +1,6 @@
 import { getRedirectByPath } from "data/getRedirectByPath";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Link from "next/link";
 
 import React from "react";
 import { getPostBySlug as getTutorialBySlug } from "../../data/getPostBySlug";
@@ -10,10 +11,11 @@ type TutorialPageProps = {
 };
 const TutorialPage = (props: TutorialPageProps) => {
   return (
-    <div>
-      Tutorials Page
-      <h1>{props.tutorial?.slug}</h1>
-      <p>{props.tutorial?.content}</p>
+    <div className='container'>
+      <h1 className='text-2xl my-4'>Tutorials Page</h1>
+      <h1>Slug: {props.tutorial?.slug}</h1>
+      <p>Content: {props.tutorial?.content}</p>
+      <Link className='btn my-2 btn-accent' href="/"> Back to home</Link>
     </div>
   );
 };

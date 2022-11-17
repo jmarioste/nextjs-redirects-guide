@@ -10,3 +10,12 @@ export function getRedirectByPath(sourcePath: string): RedirectItem | undefined 
   const redirect = fileContents.find((p) => p.source === sourcePath);
   return redirect;
 }
+
+
+export function getAllRedirects(): RedirectItem[] {
+  const dbDirectory = path.join(process.cwd(), "data", "redirects.json");
+  const jsonStr = readFileSync(dbDirectory).toString();
+  const fileContents = JSON.parse(jsonStr) as RedirectItem[];
+
+  return fileContents;
+}

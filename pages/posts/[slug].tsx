@@ -3,6 +3,7 @@ import { Post } from 'data/Post';
 import { getPostBySlug } from 'data/getPostBySlug';
 import { GetServerSideProps } from 'next';
 import { getRedirectByPath } from 'data/getRedirectByPath';
+import Link from 'next/link';
 
 type PostPageProps = {
   post: Post;
@@ -10,10 +11,12 @@ type PostPageProps = {
 
 const PostPage = (props: PostPageProps) => {
   return (
-    <div>
-      Post Detail Page
-      <h1>{props.post?.slug}</h1>
-      <p>{props.post?.content}</p>
+    <div className='container'>
+      <h1 className='text-2xl my-4'>Post Detail Page</h1>
+      <h1>Slug: {props.post?.slug}</h1>
+      <p>Content: {props.post?.content}</p>
+
+      <Link className='btn my-2 btn-accent' href="/"> Back to home</Link>
     </div>
   );
 };
