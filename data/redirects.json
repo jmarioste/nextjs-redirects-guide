@@ -8,5 +8,10 @@
     "source": "/tutorials/a-very-long-url-that-is-bad-for-seo",
     "destination": "/tutorials/hello-world",
     "type": 301
+  },
+  {
+    "source": "/shortcut-to-product",
+    "destination": "/tutorials/hello-world",
+    "type": 301
   }
 ]
