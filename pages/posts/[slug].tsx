@@ -11,7 +11,7 @@ type PostPageProps = {
 const PostPage = (props: PostPageProps) => {
   return (
     <div>
-      PostPage
+      Post Detail Page
       <h1>{props.post?.slug}</h1>
       <p>{props.post?.content}</p>
     </div>

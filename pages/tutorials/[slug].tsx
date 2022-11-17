@@ -11,6 +11,7 @@ type TutorialPageProps = {
 const TutorialPage = (props: TutorialPageProps) => {
   return (
     <div>
+      Tutorials Page
       <h1>{props.tutorial?.slug}</h1>
       <p>{props.tutorial?.content}</p>
     </div>
