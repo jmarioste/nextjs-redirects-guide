@@ -26,16 +26,16 @@ export const getServerSideProps: GetServerSideProps<PostPageProps> = async (
   const slug = ctx.params?.slug as string;
   const path = ctx.req.url as string;
   //check redirect
-  const redirect = getRedirectByPath(path)
-  if (redirect) {
-    return {
-      redirect: {
-        destination: redirect.destination,
-        permanent: redirect.statusCode === 301,
-        statusCode: redirect.statusCode
-      }
-    }
-  }
+  // const redirect = getRedirectByPath(path)
+  // if (redirect) {
+  //   return {
+  //     redirect: {
+  //       destination: redirect.destination,
+  //       permanent: redirect.statusCode === 301,
+  //       statusCode: redirect.statusCode
+  //     }
+  //   }
+  // }
 
   const post = getPostBySlug(slug) ?? null;
 

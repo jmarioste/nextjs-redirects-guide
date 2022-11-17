@@ -31,15 +31,15 @@ export const getStaticProps: GetStaticProps<TutorialPageProps> = async (ctx) => 
   const tutorial = getTutorialBySlug(slug) ?? null;
   const path = `/tutorials/${slug}`;
   const redirect = getRedirectByPath(path)
-  if (redirect) {
-    return {
-      redirect: {
-        destination: redirect.destination,
-        permanent: redirect.statusCode === 301,
-        statusCode: redirect.statusCode
-      }
-    }
-  }
+  // if (redirect) {
+  //   return {
+  //     redirect: {
+  //       destination: redirect.destination,
+  //       permanent: redirect.statusCode === 301,
+  //       statusCode: redirect.statusCode
+  //     }
+  //   }
+  // }
 
   if (!tutorial) {
     return {
