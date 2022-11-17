@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/posts/a-very-long-url-that-is-bad-for-seo",
+    "destination": "/posts/hello-world",
+    "type": 301
+  },
+  {
+    "source": "/tutorials/a-very-long-url-that-is-bad-for-seo",
+    "destination": "/tutorials/hello-world",
+    "type": 301
+  }
+]
